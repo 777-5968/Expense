@@ -1,9 +1,8 @@
 package com.felix.expenseapp.models
 
-data class Expense(
-    val id: Int,
+data class Transaction(
     val title: String,
     val amount: Double,
     val category: String,
-    val date: Long = System.currentTimeMillis()
+    val date: String
 )

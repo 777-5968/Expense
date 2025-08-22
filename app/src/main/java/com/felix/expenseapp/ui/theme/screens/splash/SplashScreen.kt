@@ -1,4 +1,4 @@
-package com.felix.expenseapp.ui.theme.Screens.splash
+package com.felix.expenseapp.ui.theme.screens.splash
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -14,8 +14,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun SplashScreen(onNavigateToHome: () -> Unit) {
@@ -45,4 +47,9 @@ fun SplashScreen(onNavigateToHome: () -> Unit) {
             )
         }
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun Splashpreview(){
+    SplashScreen(rememberNavController())
 }

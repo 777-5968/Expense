@@ -1,4 +1,4 @@
-package com.felix.expenseapp.ui.theme.Screens.Home
+package com.felix.expenseapp.ui.theme.screens.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Settings
@@ -103,8 +102,7 @@ fun HomeScreen(
 fun ActionButton(label: String, icon: ImageVector, onClick: () -> Unit) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         IconButton(onClick = onClick, modifier = Modifier.size(56.dp)) {
-            Icon(icon, contentDescription = label)
-        }
+            Icon(icon, contentDescription = label) }
         Text(label, style = MaterialTheme.typography.bodySmall)
     }
 }

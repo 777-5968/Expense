@@ -1,4 +1,4 @@
-package com.felix.expenseapp.ui.theme.Screens.login
+package com.felix.expenseapp.ui.theme.screens.login
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,7 +17,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun LoginScreen(onLoginClick: (String, String) -> Unit, onSignUpClick: () -> Unit) {
@@ -64,4 +66,9 @@ fun LoginScreen(onLoginClick: (String, String) -> Unit, onSignUpClick: () -> Uni
             }
         }
     }
+}
+@Preview
+@Composable
+fun LoginScreenPreview() {
+    LoginScreen(rememberNavController())
 }

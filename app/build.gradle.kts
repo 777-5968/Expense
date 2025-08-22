@@ -1,8 +1,15 @@
+import com.android.tools.r8.internal.ui
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.google.gms.google.services)
+    //add this
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
 }
+
+
 
 android {
     namespace = "com.felix.expenseapp"
@@ -49,6 +56,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -56,4 +65,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("androidx.navigation:navigation-ui:2.7.7")
+//firebase
+    implementation(libs.firebase.auth)
+    implementation("com.google.firebase:firebase-bom:32.4.1")
+    //navigation
+    implementation("androidx.navigation:navigation-compose:2.9.2")
 }
+
